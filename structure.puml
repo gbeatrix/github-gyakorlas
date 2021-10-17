@@ -1,0 +1,23 @@
+@startuml
+skinparam classAttributeIconSize 0
+hide circle
+
+class A {
+    name : String
+    year : int
+    + A(name: String, year: int)
+    + getName() : String
+}
+
+class B {
+    - attr1
+    # attr2
+    ~ attr3 : int
+    + attr4 : A
+    + B()
+    + B(int, int)
+    + getAttr() : A
+}
+
+A -- B
+@enduml
